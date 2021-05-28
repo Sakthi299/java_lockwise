@@ -1,0 +1,108 @@
+DB Configurations :
+---------------------------------------------------------------------
+
+use lockwise;
+show tables;
+select * from users;
+
+CREATE TABLE salt
+    (  
+	sno int NOT NULL AUTO_INCREMENT,
+	userid varchar (50),
+	salt varchar (255),
+	PRIMARY KEY(sno)
+	);
+
+CREATE TABLE users
+    (  
+    username varchar (20) NOT NULL,	
+    email varchar (50),  
+    password varchar (255),
+	PRIMARY KEY(email)
+    );  
+	
+CREATE TABLE passwords
+    (  
+	passid int NOT NULL AUTO_INCREMENT,
+    userid varchar (50),
+    tag varchar (20),
+	url varchar (255),	
+    website varchar (255),  
+	username varchar (255),
+	password varchar (255),
+	notes varchar (255),
+	PRIMARY KEY(passid),
+	FOREIGN KEY (userid) REFERENCES users(email)
+    );  
+	
+CREATE TABLE addresses
+	(  
+	addressid int NOT NULL AUTO_INCREMENT,
+    userid varchar (50),
+	name varchar (20),
+	tag varchar (20),
+	firstname varchar (255),	
+    lastname varchar (255),  
+    gender varchar (255),
+	address_one varchar (255),
+	address_two varchar (255),
+	city varchar (255),
+	country varchar (255),
+	state varchar (255),
+	zip varchar(255),
+	email varchar(255),
+	phone varchar (255),
+	PRIMARY KEY(addressid),
+	FOREIGN KEY (userid) REFERENCES users(email)
+    );
+
+CREATE TABLE notes
+    (  
+	noteid int NOT NULL AUTO_INCREMENT,
+    userid varchar (50),
+	name varchar (20),
+    tag varchar (20),
+	notes varchar (255),
+	PRIMARY KEY(noteid),
+	FOREIGN KEY (userid) REFERENCES users(email)
+    );  	
+
+CREATE TABLE paymentcards
+    (  
+	payid int NOT NULL AUTO_INCREMENT,
+    userid varchar (50),
+	name varchar (20),
+    tag varchar (20),
+	namecard varchar(255),
+	type varchar(255),
+	cardno varchar(255),
+	expirydate varchar(255),
+	expirymonth varchar(255),
+	cvv varchar(255),
+	notes varchar (255),
+	PRIMARY KEY(payid),
+	FOREIGN KEY (userid) REFERENCES users(email)
+    );  
+	
+CREATE TABLE bankaccounts
+    (  
+	accid int NOT NULL AUTO_INCREMENT,
+    userid varchar (50),
+	name varchar (20),
+    tag varchar (20),
+	bankname varchar(255),
+	ifsc varchar(255),
+	actype varchar(255),
+	acholder varchar(255),
+	acnumber varchar(255),
+	brname varchar(255),
+	braddr varchar(255),
+	brphone varchar(255),
+	acdate varchar(255),
+	notes varchar (255),
+	PRIMARY KEY(accid),
+	FOREIGN KEY (userid) REFERENCES users(email)
+    ); 
+	
+	
+---------------------------------------------------------------------
