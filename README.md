@@ -1,2 +1,2 @@
-# java_lockwise
-A feasible global password vault application
+# Lockwise
+#### A feasible global password vault application
