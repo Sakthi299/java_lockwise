@@ -40,3 +40,7 @@
 ### Password Generator
 ![Generate Password](https://github.com/Sakthi299/java_lockwise/blob/main/snapshots/pass1.png?raw=true)
 ![Generated Password](https://github.com/Sakthi299/java_lockwise/blob/main/snapshots/pass2.png?raw=true)
+
+#### Thanks! :heart:
+
+Made with :heart: and Java.
