@@ -2,7 +2,7 @@
 #### A feasible global password vault application
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-:star: Star us on GitHub — It motivates to develop more!
+:star: Star me on GitHub — It motivates to develop more... 😀 
 
 ## Problem Statement
 ![](https://img.shields.io/badge/-Security_by_Obscurity_is_not_that_good-blue?style=for-the-badge)
